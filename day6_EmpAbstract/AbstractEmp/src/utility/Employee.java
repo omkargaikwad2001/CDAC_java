@@ -1,0 +1,36 @@
+package utility;
+
+public abstract class Employee extends Person{
+	
+	private int empId;
+	protected double salary;
+	
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Employee(int empId, double salary, String name, int age, int dd,int mm,int yy) {
+		super(name,age,dd,mm,yy);
+		this.empId = empId;
+		this.salary = salary;
+	}
+	
+	public void display() {
+		super.display();
+		System.out.println("EmpID = "+empId);
+		System.out.println("Emp Salary = "+salary);
+		
+	}
+	
+	public abstract double calculateSalary();
+
+	@Override
+	public String toString() {
+		return super.toString()+"Employee [empId=" + empId + ", salary=" + salary + "]";
+	}
+	
+	
+	
+
+}
